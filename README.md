@@ -9,77 +9,30 @@ Before starting, make sure you have:
 
 - A Mac with macOS
 - A GitHub account (create one at [github.com](https://github.com) if needed)
-- VS Code installed ([download here](https://code.visualstudio.com))
+- A Claude Pro or Max subscription (or Claude for Teams/Enterprise access)
 
 ## Getting started
 
-### Step 1: Open Terminal
+### Step 1: Open Claude Code
 
-Press `Cmd + Space`, type "Terminal", and hit Enter. You'll see a window with a command prompt -
-this is where you'll type commands.
+Go to **[claude.ai/code](https://claude.ai/code)** and log in with your Claude account.
 
-Don't panic. The terminal is just a text-based way to talk to your computer. Think of it as
-texting your Mac instead of clicking around.
+That's it. Claude Code runs in your browser - no installation needed.
 
-### Step 2: Install Homebrew (the Mac package manager)
+### Step 2: Connect to GitHub
 
-Copy and paste this into Terminal, then press Enter:
+In Claude Code, ask:
 
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+Help me connect to GitHub
 ```
 
-Follow the prompts. This installs Homebrew, which lets you install other tools easily.
+Claude will guide you through the authentication process.
 
-After installation, run the commands shown in the terminal to add Homebrew to your PATH (usually
-two commands starting with `echo` and `eval`).
+### Step 3: Start learning
 
-### Step 3: Install the essential tools
-
-```bash
-brew install git gh node
-```
-
-This installs:
-- **git** - version control (track changes to your code)
-- **gh** - GitHub's command-line tool
-- **node** - JavaScript runtime (needed for frontend tools)
-
-### Step 4: Install Claude Code
-
-```bash
-npm install -g @anthropic-ai/claude-code
-```
-
-### Step 5: Set up GitHub authentication
-
-```bash
-gh auth login
-```
-
-Choose:
-- GitHub.com
-- HTTPS
-- Yes (authenticate Git with GitHub credentials)
-- Login with a web browser
-
-### Step 6: Clone this repository
-
-```bash
-cd ~/Projects
-git clone https://github.com/oozou/claude-for-designers.git
-cd claude-for-designers
-```
-
-Note: Create the Projects folder first if it doesn't exist: `mkdir -p ~/Projects`
-
-### Step 7: Start Claude Code
-
-```bash
-claude
-```
-
-You're now ready to start learning. Type your questions or requests to Claude directly.
+You're ready to go. Work through the tutorial modules below, asking Claude Code to help you at
+each step.
 
 ## Tutorial modules
 
@@ -95,13 +48,14 @@ Work through these in order:
 
 ### Essential terminal commands
 
+These commands work in Claude Code's built-in terminal:
+
 | Command | What it does | Example |
 |---------|--------------|---------|
 | `cd` | Change directory | `cd Projects` |
 | `ls` | List files | `ls -la` |
 | `pwd` | Print current directory | `pwd` |
 | `mkdir` | Make directory | `mkdir my-project` |
-| `code .` | Open VS Code here | `code .` |
 
 ### Essential Git commands
 
@@ -113,22 +67,24 @@ Work through these in order:
 | `git push` | Upload to GitHub |
 | `git pull` | Download latest changes |
 
-### Essential Claude Code commands
+### Talking to Claude Code
 
-| Command | What it does |
-|---------|--------------|
-| `claude` | Start Claude Code |
-| `/help` | Show available commands |
-| `/clear` | Clear conversation |
-| `Ctrl+C` | Cancel current operation |
-| `Cmd+D` or type `exit` | Exit Claude Code |
+Just type naturally. Examples:
+
+| What you want | What to say |
+|---------------|-------------|
+| Create a file | "Create an index.html with a basic page structure" |
+| Edit code | "Change the background color to blue in styles.css" |
+| Commit changes | "Commit these changes with an appropriate message" |
+| Create a PR | "Create a pull request for this branch" |
+| Get help | "Explain what this code does" |
 
 ## Need help?
 
 If you get stuck:
 
-1. **Read the error message** - it usually tells you what went wrong
-2. **Ask Claude** - paste the error and ask what it means
+1. **Ask Claude** - paste the error and ask what it means
+2. **Check the docs** - [claude.ai/code/docs](https://code.claude.com/docs/en/setup)
 3. **Ask in Slack** - post in **#ai-designers** and mention **@const**
 
 ## Project structure

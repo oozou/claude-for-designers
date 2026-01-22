@@ -1,136 +1,127 @@
 # Exercise 2: Git basics
 
-Practice version control with Git.
+Practice version control with Git. You can do this exercise in Claude Code at
+[claude.ai/code](https://claude.ai/code) - Claude handles Git commands for you.
 
-## Setup
+## Why learn Git basics?
 
-Create a practice repository:
+Git tracks changes to your code. It lets you:
+- Save checkpoints you can return to
+- See what changed and when
+- Collaborate without overwriting each other's work
 
-```bash
-mkdir ~/git-exercise
-cd ~/git-exercise
-git init
-```
+Claude Code handles Git for you, but understanding the concepts helps you work more effectively.
+
+## Core concepts
+
+### Repository (repo)
+A project folder tracked by Git.
+
+### Commit
+A snapshot of your project at a point in time. Like a save point in a game.
+
+### Branch
+A parallel version of your code for working on features without affecting the main code.
 
 ## Tasks
 
-### Part 1: First commit
+### Part 1: Create a repo and make commits
 
-1. **Check status**
-   ```bash
-   git status
+1. **Create a new project**
    ```
-   Should show "No commits yet" and nothing to commit.
-
-2. **Create a file**
-   ```bash
-   echo "# My Practice Project" > README.md
+   Create a new project called "git-practice" with a README.md file
    ```
 
-3. **Check status again**
-   ```bash
-   git status
+2. **Check the status**
    ```
-   Now you should see README.md as an "untracked file".
+   What's the git status?
+   ```
+   Claude will show you that README.md is ready to be committed.
 
-4. **Stage the file**
-   ```bash
-   git add README.md
+3. **Make your first commit**
+   ```
+   Commit the README with the message "Initial commit"
    ```
 
-5. **Check status**
-   ```bash
-   git status
+4. **Edit the file**
    ```
-   README.md should now be under "Changes to be committed".
+   Add a description to the README: "This is a practice project for learning Git."
+   ```
 
-6. **Commit**
-   ```bash
-   git commit -m "Add README"
+5. **See what changed**
+   ```
+   What changed since my last commit?
+   ```
+   Claude will show you the diff (the difference).
+
+6. **Commit the change**
+   ```
+   Commit this change with the message "Add project description"
    ```
 
 7. **View history**
-   ```bash
-   git log
+   ```
+   Show me the commit history
    ```
 
-### Part 2: Making changes
-
-1. **Edit the file**
-   ```bash
-   echo "This is a practice project for learning Git." >> README.md
-   ```
-
-2. **See the diff**
-   ```bash
-   git diff
-   ```
-   Shows what changed (+ means added line).
-
-3. **Stage and commit**
-   ```bash
-   git add README.md
-   git commit -m "Add project description"
-   ```
-
-4. **View history**
-   ```bash
-   git log --oneline
-   ```
-
-### Part 3: Branching
+### Part 2: Branching
 
 1. **Create a branch**
-   ```bash
-   git checkout -b feature/add-about
+   ```
+   Create a new branch called "feature/add-about"
    ```
 
-2. **Confirm you switched**
-   ```bash
-   git branch
+2. **Make a change on the branch**
    ```
-   The `*` shows your current branch.
+   Create a file called ABOUT.md with some text about the project
+   ```
 
-3. **Add a new file**
-   ```bash
-   echo "## About\n\nThis project helps me learn Git." > ABOUT.md
-   git add ABOUT.md
-   git commit -m "Add about section"
+3. **Commit it**
+   ```
+   Commit this new file
    ```
 
 4. **Switch back to main**
-   ```bash
-   git checkout main
+   ```
+   Switch to the main branch
    ```
 
-5. **Notice ABOUT.md is gone**
-   ```bash
-   ls
+5. **Notice the difference**
    ```
-   It only exists on the feature branch!
-
-6. **Switch back and confirm**
-   ```bash
-   git checkout feature/add-about
-   ls
+   What files are in this project?
    ```
-   ABOUT.md is back.
+   ABOUT.md won't be there - it only exists on your feature branch.
 
-### Part 4: Clean up
+6. **Switch back to see it**
+   ```
+   Switch to the feature/add-about branch
+   ```
+   Now ABOUT.md is back.
 
-```bash
-cd ~
-rm -rf git-exercise
-```
+## Key Git concepts
 
-## Bonus challenges
+| Concept | What it means |
+|---------|---------------|
+| Repository | Your project folder with Git tracking |
+| Commit | A saved snapshot of your project |
+| Branch | A parallel version for working on features |
+| Main | The primary branch (the "real" version) |
+| Staging | Preparing files to be committed |
+| Diff | The changes between two versions |
 
-- Try `git log --graph --oneline --all` to see branches visually
-- Create a merge conflict and resolve it:
-  1. Make a change to README.md on main
-  2. Make a different change to the same line on your feature branch
-  3. Try to merge and see what happens
+## How to talk to Claude about Git
+
+Instead of memorizing commands, just describe what you want:
+
+| What you want | What to say |
+|---------------|-------------|
+| See changes | "What's changed since my last commit?" |
+| Save work | "Commit these changes" |
+| New feature | "Create a branch called feature/login" |
+| Switch branches | "Switch to the main branch" |
+| Upload to GitHub | "Push this to GitHub" |
+| Get latest | "Pull the latest changes" |
 
 ## Done?
 
-You understand Git basics. Move on to Exercise 3 to use Claude Code for real prototyping!
+You understand Git basics. Move on to Exercise 3 to build a real prototype!

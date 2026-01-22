@@ -46,45 +46,23 @@ Components include:
 
 ## Setting up a new project
 
-### Quick start with Vite + React + Tailwind
-
-```bash
-npm create vite@latest my-prototype -- --template react-ts
-cd my-prototype
-npm install
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-```
-
-Or just ask Claude:
+In Claude Code ([claude.ai/code](https://claude.ai/code)), just ask for what you need:
 
 ```
 Create a new Vite project with React, TypeScript, and Tailwind CSS
 ```
 
+Claude handles all the setup for you.
+
 ### Adding shadcn/ui
 
-After setting up Tailwind:
-
-```bash
-npx shadcn@latest init
-```
-
-Answer the prompts (defaults are usually fine).
-
-Then add components as needed:
-
-```bash
-npx shadcn@latest add button
-npx shadcn@latest add card
-npx shadcn@latest add input
-```
-
-Or ask Claude:
+Ask Claude:
 
 ```
-Add the button, card, and input components from shadcn/ui
+Add shadcn/ui to this project with the button, card, and input components
 ```
+
+Claude will install and configure everything.
 
 ## Tailwind CSS essentials
 
@@ -222,7 +200,7 @@ Breakpoints:
 
 ### Using components
 
-After adding a component with `npx shadcn@latest add button`, import and use it:
+After Claude adds a component, import and use it in your code:
 
 ```tsx
 import { Button } from "@/components/ui/button"
@@ -325,14 +303,9 @@ Add hover states and transitions to make it feel more polished
 
 ## Exercise: Build a prototype
 
-Create a simple dashboard:
+Create a simple dashboard using Claude Code:
 
-1. Set up a new project:
-   ```bash
-   mkdir dashboard-prototype
-   cd dashboard-prototype
-   claude
-   ```
+1. Go to [claude.ai/code](https://claude.ai/code)
 
 2. Ask Claude to scaffold it:
    ```
@@ -352,11 +325,7 @@ Create a simple dashboard:
    Use shadcn/ui components.
    ```
 
-5. Run and iterate:
-   ```bash
-   npm run dev
-   ```
-   Open http://localhost:5173 in your browser
+5. Preview your work in Claude Code's preview pane
 
 6. Refine with Claude:
    ```

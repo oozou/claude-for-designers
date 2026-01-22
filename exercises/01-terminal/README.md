@@ -1,51 +1,99 @@
 # Exercise 1: Terminal navigation
 
-Practice navigating your Mac using the terminal.
+Practice navigating using the terminal. You can do this exercise in Claude Code's built-in
+terminal at [claude.ai/code](https://claude.ai/code).
+
+## Why learn terminal basics?
+
+Even though Claude Code handles most commands for you, understanding terminal basics helps you:
+- Read what Claude is doing
+- Debug when things go wrong
+- Feel confident asking Claude to run commands
 
 ## Tasks
 
-1. **Find your location**
-   - Open Terminal
-   - Run `pwd` to see where you are
-   - Expected: something like `/Users/yourname`
+Try these commands in Claude Code. Just ask Claude to run them, or type them in the terminal pane.
 
-2. **Explore your home folder**
-   - Run `ls` to see what's in your home folder
-   - Run `ls -la` to see hidden files too
-   - Notice files starting with `.` - these are hidden config files
+### 1. Find your location
 
-3. **Navigate to Documents**
-   - Run `cd Documents`
-   - Run `pwd` to confirm
-   - Run `ls` to see what's there
+```
+Run pwd to see where I am
+```
 
-4. **Create a practice folder**
-   - Run `mkdir terminal-exercise`
-   - Run `cd terminal-exercise`
-   - Run `pwd` to confirm you're inside
+This shows your current directory (folder).
 
-5. **Create some files**
-   - Run `touch file1.txt file2.txt file3.txt`
-   - Run `ls` to see them
-   - Run `ls -la` to see details (they should be 0 bytes)
+### 2. List files
 
-6. **Navigate with paths**
-   - Run `cd ~` to go home
-   - Run `cd ~/Documents/terminal-exercise` to go directly there
-   - Run `cd ..` to go up one level
-   - Run `pwd` - you should be in Documents
+```
+Run ls to see what files are here
+```
 
-7. **Clean up**
-   - Run `rm -r terminal-exercise`
-   - Run `ls` to confirm it's gone
+```
+Run ls -la to see hidden files and details
+```
 
-## Bonus challenges
+### 3. Create a folder
 
-- Use Tab completion: type `cd Doc` and press Tab
-- Use the up arrow to recall previous commands
-- Run `history` to see all your recent commands
-- Try `cd -` to go back to the previous directory
+```
+Create a folder called "practice"
+```
+
+Or run directly: `mkdir practice`
+
+### 4. Navigate into it
+
+```
+Go into the practice folder
+```
+
+Or run: `cd practice`
+
+### 5. Create some files
+
+```
+Create three empty text files called file1.txt, file2.txt, and file3.txt
+```
+
+Or run: `touch file1.txt file2.txt file3.txt`
+
+### 6. Check your work
+
+```
+List the files to confirm they were created
+```
+
+### 7. Clean up
+
+```
+Delete the practice folder and everything in it
+```
+
+Or run: `rm -r practice`
+
+## Key commands to remember
+
+| Command | What it does |
+|---------|--------------|
+| `pwd` | Print working directory (where am I?) |
+| `ls` | List files |
+| `ls -la` | List all files with details |
+| `cd folder` | Change into a folder |
+| `cd ..` | Go up one level |
+| `mkdir name` | Create a folder |
+| `touch file` | Create an empty file |
+| `rm file` | Delete a file |
+| `rm -r folder` | Delete a folder and contents |
+
+## Bonus: Ask Claude
+
+Instead of memorizing commands, just ask Claude:
+
+- "What files are in this folder?"
+- "Create a new folder called components"
+- "Show me the contents of package.json"
+
+Claude translates your requests into the right commands.
 
 ## Done?
 
-You've mastered basic terminal navigation. Move on to Exercise 2!
+You understand the basics of terminal navigation. Move on to Exercise 2 to learn Git!

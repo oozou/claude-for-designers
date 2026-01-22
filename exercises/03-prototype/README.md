@@ -1,6 +1,6 @@
 # Exercise 3: Build a prototype with Claude Code
 
-Put it all together: use terminal, Git, and Claude Code to build a real frontend prototype.
+Put it all together: use Claude Code to build a real frontend prototype.
 
 ## The challenge
 
@@ -12,26 +12,17 @@ Build a simple landing page for a fictional product. Use:
 
 ## Setup
 
-1. **Create the project folder**
-   ```bash
-   mkdir ~/Projects/landing-page-prototype
-   cd ~/Projects/landing-page-prototype
-   git init
-   ```
-
-2. **Start Claude Code**
-   ```bash
-   claude
-   ```
+1. Go to [claude.ai/code](https://claude.ai/code)
+2. Connect to GitHub if you haven't already (ask Claude: "Help me connect to GitHub")
 
 ## Build it step by step
 
-### Step 1: Scaffold the project
+### Step 1: Create and scaffold the project
 
 Ask Claude:
 ```
-Create a simple HTML file with Tailwind CSS via CDN.
-Include a basic page structure with head and body.
+Create a new project called "landing-page-prototype" with a simple HTML file
+and Tailwind CSS via CDN. Include a basic page structure.
 ```
 
 ### Step 2: Add a hero section
@@ -77,10 +68,7 @@ Commit all changes with the message "Complete landing page prototype"
 
 ### Step 7: View your work
 
-Exit Claude Code and open the file:
-```bash
-open index.html
-```
+Check the preview pane in Claude Code to see your landing page.
 
 ## Bonus challenges
 
@@ -100,14 +88,19 @@ open index.html
    ```
 
 4. **Create a PR**
-   - Create a GitHub repository
-   - Push your code
-   - Ask Claude to create a pull request
+   ```
+   Create a GitHub repository for this project and push my code
+   ```
+
+   Then:
+   ```
+   Create a pull request with a summary of what I built
+   ```
 
 ## Evaluation checklist
 
 - [ ] Page looks good on desktop
-- [ ] Page looks good on mobile (test with browser dev tools)
+- [ ] Page looks good on mobile (check the preview at different sizes)
 - [ ] Button has a hover state
 - [ ] Cards have visual separation
 - [ ] Code is committed to Git
@@ -115,16 +108,16 @@ open index.html
 
 ## Stuck?
 
-1. Read the error message carefully
-2. Ask Claude: "I got this error: [paste error]. What does it mean?"
+1. Ask Claude: "I got this error: [paste error]. What does it mean?"
+2. Ask Claude: "This doesn't look right. The button should be centered."
 3. Ask in **#ai-designers** and mention **@const**
 
 ## Done?
 
 Congratulations! You've completed the tutorial. You now know:
-- How to navigate using the terminal
-- How to track changes with Git
 - How to use Claude Code to build UIs
 - How to work with Tailwind CSS
+- How to track changes with Git
+- How to push to GitHub and create pull requests
 
 Keep practicing by building more prototypes. The more you build, the faster you'll get.

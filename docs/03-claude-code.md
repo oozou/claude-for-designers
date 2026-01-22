@@ -1,21 +1,26 @@
 # Claude Code workflow
 
-Claude Code is an AI assistant that lives in your terminal. It can read your files, write code,
-run commands, and help you build things faster. Think of it as pair programming with an AI.
+Claude Code is an AI assistant that helps you write code. It runs in your browser at
+[claude.ai/code](https://claude.ai/code) - no installation needed. Think of it as pair programming
+with an AI that can read your files, write code, and run commands.
 
-## Starting Claude Code
+## Getting started
 
-Navigate to your project folder, then:
+1. Go to **[claude.ai/code](https://claude.ai/code)**
+2. Log in with your Claude account
+3. You're ready to start building
 
-```bash
-claude
-```
+## The interface
 
-You'll see a prompt where you can type natural language requests.
+Claude Code shows you:
+- A chat interface where you type requests
+- A file browser showing your project
+- A preview pane for viewing your work
+- A terminal for running commands
 
 ## Basic interaction
 
-Just type what you want to do:
+Just type what you want to do in natural language:
 
 ```
 Create a simple HTML page with a blue header
@@ -55,16 +60,23 @@ Fix the CSS so the button is centered
 Refactor this component to use Tailwind classes
 ```
 
-## Essential commands
+## Working with projects
 
-Type these in the Claude Code prompt:
+### Creating a new project
 
-| Command | What it does |
-|---------|--------------|
-| `/help` | Show available commands |
-| `/clear` | Clear conversation history |
-| `Ctrl+C` | Cancel current operation |
-| `Cmd+D` or `exit` | Exit Claude Code |
+```
+Create a new project called "my-landing-page" with HTML, CSS, and Tailwind
+```
+
+Claude will set up the project structure for you.
+
+### Opening an existing project
+
+```
+Clone https://github.com/oozou/claude-for-designers
+```
+
+Or connect your GitHub account and browse your repositories.
 
 ## Working with files
 
@@ -81,7 +93,7 @@ Claude can read and modify your project files. Be specific about what you want:
 
 ## Git integration
 
-Claude can handle Git operations for you:
+Claude handles Git operations for you. No need to memorize commands.
 
 ### Committing changes
 
@@ -90,7 +102,7 @@ Commit these changes with an appropriate message
 ```
 
 Claude will:
-1. Check what's changed (`git status`)
+1. Check what's changed
 2. Stage the relevant files
 3. Write a commit message
 4. Create the commit
@@ -106,10 +118,14 @@ Claude will:
 2. Create a PR with a title and description
 3. Give you the PR link
 
-### Checking status
+### Other Git operations
 
 ```
-What's the git status?
+What's changed since my last commit?
+```
+
+```
+Create a new branch called feature/new-header
 ```
 
 ```
@@ -118,7 +134,7 @@ Show me the recent commits
 
 ## Workflow example
 
-Here's a typical workflow using Claude Code:
+Here's a typical workflow:
 
 ### 1. Start a new feature
 
@@ -133,13 +149,17 @@ Create a contact form component with fields for name, email, and message.
 Use Tailwind CSS for styling. Include form validation.
 ```
 
-### 3. Review and iterate
+### 3. Preview your work
+
+Claude shows a live preview. Check it looks right.
+
+### 4. Iterate
 
 ```
 Make the form more compact and add a success message after submission
 ```
 
-### 4. Commit and push
+### 5. Commit and push
 
 ```
 Commit these changes and create a pull request
@@ -236,7 +256,7 @@ Change the primary color from blue to purple throughout the component
 
 ### Claude seems stuck
 
-Press `Ctrl+C` to cancel, then try rephrasing your request.
+Click the stop button or refresh the page, then try rephrasing your request.
 
 ### Claude made a mistake
 
@@ -251,9 +271,9 @@ That's not quite right. The button should be on the right side, not the left.
 Undo the last change you made to Header.tsx
 ```
 
-Or use Git:
+Or ask Claude to use Git:
 ```
-git checkout -- src/components/Header.tsx
+Revert the last commit
 ```
 
 ### Claude is asking too many questions
@@ -266,19 +286,14 @@ Center it on the page. Don't ask questions, just make reasonable choices.
 
 ## Exercise: Build with Claude Code
 
-1. Create a new project folder:
-   ```bash
-   mkdir my-first-claude-project
-   cd my-first-claude-project
-   git init
+1. Go to [claude.ai/code](https://claude.ai/code)
+
+2. Create a new project:
+   ```
+   Create a new project called "my-first-page" with a basic HTML file and Tailwind CSS
    ```
 
-2. Start Claude Code:
-   ```bash
-   claude
-   ```
-
-3. Try these prompts:
+3. Build a page:
    ```
    Create a simple HTML page with a navigation bar
    ```
@@ -291,15 +306,14 @@ Center it on the page. Don't ask questions, just make reasonable choices.
    Make it responsive using CSS Grid
    ```
 
+4. Save your work:
    ```
    Commit this as "Initial page layout"
    ```
 
-4. Open the result in your browser:
-   ```bash
-   open index.html
-   ```
+5. View the preview to see your result
 
 ## Next steps
 
-Continue to [Frontend prototyping](04-frontend-prototyping.md) to learn about Tailwind and shadcn/ui.
+Continue to [Frontend prototyping](04-frontend-prototyping.md) to learn about Tailwind and
+shadcn/ui.
